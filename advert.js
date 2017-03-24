@@ -1,7 +1,7 @@
 var pers = top.frames["d_pers"].document;
 var menu = top.frames["d_menu"].document;
 
-if (localStorage.krik==undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Р—Р»Рѕ РІСЃРµРіРґР° РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ! :new47: РЎРєРѕР»СЊРєРѕ СЃС‚РѕРёС‚ РІС‹С…РѕРґ РёР· РєР»Р°РЅР°? crazyorcs РѕР¶РёРІР»СЏСЋС‚ РЅРѕРІРѕСЃС‚РЅСѓСЋ:):new63: Р—Р°Р№РґРё Рё С‚С‹)";}
+if (localStorage.krik==undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Зло всегда возвращается! :new47: Сколько стоит выход из клана? crazyorcs оживляют новостную:):new63: Зайди и ты)";}
 if (localStorage.lastkriklocs==undefined || localStorage.lastkriklocs==NaN) {localStorage.lastkriklocs = "0,0,0";}
 
 function createMyElement(targetframe, elname, elid, elclass, elstyle, elonclick, innertext) {
@@ -46,7 +46,7 @@ function create_rblock() {
 		
 		var rbutton = menu.createElement("button");
 		rbutton.setAttribute("id", "rclan");
-		rbutton.innerHTML = "Р РµРєР»Р°РјРёС‚СЊ";
+		rbutton.innerHTML = "Рекламить";
 		rbutton.setAttribute("onclick", "say()");
 		rbutton.setAttribute("class", "rmenu_button");
 		rbutton.setAttribute("style", "");
@@ -59,20 +59,20 @@ function deny(txt) {alert(txt);}
 
 function say() {
 	var loctext = top.frames["d_act"].document.getElementById("rollingscroll").getAttribute("title");
-	if (loctext == "РљРѕРІС‡РµРі: Р”РѕРј Р±РѕР№С†РѕРІ" || loctext == "РљРѕРІС‡РµРі: Р РµРіРёСЃС‚СЂР°С‚СѓСЂР°" || loctext == "РљРѕРІС‡РµРі: РўРѕСЂРіРѕРІР°СЏ РљРѕРјРЅР°С‚Р°") {
+	if (loctext == "Ковчег: Дом бойцов" || loctext == "Ковчег: Регистратура" || loctext == "Ковчег: Торговая Комната") {
 		var msgfld = top.frames["d_chatact"].document.getElementById("msgfld");
 		
 		msgfld.setAttribute("value", localStorage.krik);
 		var arr = localStorage.lastkriklocs.split(",");
 		var now = new Date().getTime().toString();
 		var storage = "";
-		if (loctext == "РљРѕРІС‡РµРі: Р”РѕРј Р±РѕР№С†РѕРІ") {storage = ""+now+","+arr[1]+","+arr[2]+"";}
-		if (loctext == "РљРѕРІС‡РµРі: Р РµРіРёСЃС‚СЂР°С‚СѓСЂР°") {storage = ""+arr[0]+","+now+","+arr[2]+"";}
-		if (loctext == "РљРѕРІС‡РµРі: РўРѕСЂРіРѕРІР°СЏ РљРѕРјРЅР°С‚Р°") {storage = ""+arr[0]+","+arr[1]+","+now+"";}
+		if (loctext == "Ковчег: Дом бойцов") {storage = ""+now+","+arr[1]+","+arr[2]+"";}
+		if (loctext == "Ковчег: Регистратура") {storage = ""+arr[0]+","+now+","+arr[2]+"";}
+		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now+"";}
 		localStorage.lastkriklocs = storage;
 		//top.frames["d_chatact"].document.getElementById("msgsnd").click();
 	} else {
-		alert("РўСѓС‚ РЅРµР»СЊР·СЏ СЂРµРєР»Р°РјРёС‚СЊ!");
+		alert("Тут нельзя рекламить");
 	}
 }
 
@@ -90,14 +90,14 @@ function swichButton(time) {
 	var infodiv = menu.getElementById("infodiv");
 	if (time < 0 ) {
 		infodiv.setAttribute("style", "display:none;");
-		rbutton.innerHTML = "Р РµРєР»Р°РјРёС‚СЊ";
+		rbutton.innerHTML = "Рекламить";
 		rbutton.setAttribute("style", "color:green; display:inline-block;");
 		rbutton.setAttribute("onclick", "say()");
 	} else {
 		infodiv.setAttribute("style", "display:none;");
-		rbutton.innerHTML = "РќРµР»СЊР·СЏ";
+		rbutton.innerHTML = "Нельзя";
 		rbutton.setAttribute("style", "color:red; display:inline-block;");
-		rbutton.setAttribute("onclick", "deny('10 РјРёРЅСѓС‚ РµС‰Рµ РЅРµ РїСЂРѕС€Р»Рѕ!')");
+		rbutton.setAttribute("onclick", "deny('10 минут еще не прошло!')");
 	}
 }
 
@@ -122,24 +122,24 @@ function correct_rbutton(){
 			var mutime = parseInt(arr[1]) + 660000 - now;
 			var tgtime = parseInt(arr[2]) + 660000 - now;
 			
-			if (dbtime < 0 ) {rdom.innerHTML = "Р”Р‘ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("Р”Р‘ - ", parseInt(dbtime/1000), "rdom");}
+			if (dbtime < 0 ) {rdom.innerHTML = "ДБ - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("ДБ - ", parseInt(dbtime/1000), "rdom");}
 			
-			if (mutime < 0 ) {rmun.innerHTML = "Р Р“ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("Р Р“ - ", parseInt(mutime/1000), "rmun");}
+			if (mutime < 0 ) {rmun.innerHTML = "РГ - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("РГ - ", parseInt(mutime/1000), "rmun");}
 			
-			if (tgtime < 0 ) {rtorg.innerHTML = "РўРљ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("РўРљ - ", parseInt(tgtime/1000), "rtorg");}
+			if (tgtime < 0 ) {rtorg.innerHTML = "ТГ - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("ТК - ", parseInt(tgtime/1000), "rtorg");}
 		
 			switch (title) {
-				case "РљРѕРІС‡РµРі: Р”РѕРј Р±РѕР№С†РѕРІ":swichButton(dbtime);break;
-				case "РљРѕРІС‡РµРі: Р РµРіРёСЃС‚СЂР°С‚СѓСЂР°":swichButton(mutime);break;
-				case "РљРѕРІС‡РµРі: РўРѕСЂРіРѕРІР°СЏ РљРѕРјРЅР°С‚Р°":swichButton(tgtime);break;
+				case "Ковчег: Дом бойцов":swichButton(dbtime);break;
+				case "Ковчег: Регистратура":swichButton(mutime);break;
+				case "Ковчег: Торговая Комната":swichButton(tgtime);break;
 				default: {
 					infodiv.setAttribute("style", "display:inline-block;");
-					rbutton.innerHTML = "РќРµР»СЊР·СЏ";
+					rbutton.innerHTML = "Нельзя";
 					rbutton.setAttribute("style", "color:red; display:none;");
-					rbutton.setAttribute("onclick", "deny('РўСѓС‚ РЅРµР»СЊР·СЏ СЂРµРєР»Р°РјРёС‚СЊ!')");
+					rbutton.setAttribute("onclick", "deny('Тут нельзя рекламить!')");
 				}
 			}
 		}
