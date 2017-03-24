@@ -118,9 +118,9 @@ function correct_rbutton(){
 			var rmun = menu.getElementById("rmun");
 			var rtorg = menu.getElementById("rtorg");
 
-			var dbtime = parseInt(arr[0]) + 600000 - now;
-			var mutime = parseInt(arr[1]) + 600000 - now;
-			var tgtime = parseInt(arr[2]) + 600000 - now;
+			var dbtime = parseInt(arr[0]) + 660000 - now;
+			var mutime = parseInt(arr[1]) + 660000 - now;
+			var tgtime = parseInt(arr[2]) + 660000 - now;
 			
 			if (dbtime < 0 ) {rdom.innerHTML = "ДБ - <span style='color:green;'>00:00</span>";
 			} else {correctTimers("ДБ - ", parseInt(dbtime/1000), "rdom");}
