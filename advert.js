@@ -1,7 +1,7 @@
 var pers = top.frames["d_pers"].document;
 var menu = top.frames["d_menu"].document;
 
-if (localStorage.krik===undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Зло всегда возвращается! :new47: Сколько стоит выход из клана? crazyorcs оживляют новостную:):new63: Зайди и ты)";}
+if (localStorage.krik===undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: ??? ?????? ????????????! :new47: ??????? ????? ????? ?? ?????? crazyorcs ???????? ?????????:):new63: ????? ? ??)";}
 if (localStorage.lastkriklocs===undefined || localStorage.lastkriklocs==NaN) {localStorage.lastkriklocs = "0,0,0";}
 
 function createMyElement(targetframe, elname, elid, elclass, elstyle, elonclick, innertext) {
@@ -46,7 +46,7 @@ function create_rblock() {
 		
 		var rbutton = menu.createElement("button");
 		rbutton.setAttribute("id", "rclan");
-		rbutton.innerHTML = "Рекламить";
+		rbutton.innerHTML = "?????????";
 		rbutton.setAttribute("onclick", "say()");
 		rbutton.setAttribute("class", "rmenu_button");
 		rbutton.setAttribute("style", "");
@@ -59,20 +59,20 @@ function deny(txt) {alert(txt);}
 
 function say() {
 	var loctext = top.frames["d_act"].document.getElementById("rollingscroll").getAttribute("title");
-	if (loctext == "Ковчег: Дом бойцов" || loctext == "Ковчег: Регистратура" || loctext == "Ковчег: Торговая Комната") {
+	if (loctext == "??????: ??? ??????" || loctext == "??????: ????????????" || loctext == "??????: ???????? ???????") {
 		var msgfld = top.frames["d_chatact"].document.getElementById("msgfld");
         msgfld.setAttribute("value", "");
 		msgfld.setAttribute("value", localStorage.krik);
 		var arr = localStorage.lastkriklocs.split(",");
 		var now = new Date().getTime().toString();
 		var storage = "";
-		if (loctext == "Ковчег: Дом бойцов") {storage = ""+now+","+arr[1]+","+arr[2]+"";}
-		if (loctext == "Ковчег: Регистратура") {storage = ""+arr[0]+","+now+","+arr[2]+"";}
-		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now+"";}
+		if (loctext == "??????: ??? ??????") {storage = ""+now+","+arr[1]+","+arr[2]+"";}
+		if (loctext == "??????: ????????????") {storage = ""+arr[0]+","+now+","+arr[2]+"";}
+		if (loctext == "??????: ???????? ???????") {storage = ""+arr[0]+","+arr[1]+","+now+"";}
 		localStorage.lastkriklocs = storage;
 		//top.frames["d_chatact"].document.getElementById("msgsnd").click();
 	} else {
-		alert("Тут нельзя рекламить");
+		alert("??? ?????? ?????????");
 	}
 }
 
@@ -90,14 +90,14 @@ function swichButton(time) {
 	var infodiv = menu.getElementById("infodiv");
 	if (time < 0 ) {
 		infodiv.setAttribute("style", "display:none;");
-		rbutton.innerHTML = "Рекламить";
+		rbutton.innerHTML = "?????????";
 		rbutton.setAttribute("style", "color:green; display:inline-block;");
 		rbutton.setAttribute("onclick", "say()");
 	} else {
 		infodiv.setAttribute("style", "display:none;");
-		rbutton.innerHTML = "Нельзя";
+		rbutton.innerHTML = "??????";
 		rbutton.setAttribute("style", "color:red; display:inline-block;");
-		rbutton.setAttribute("onclick", "deny('10 минут еще не прошло!')");
+		rbutton.setAttribute("onclick", "deny('10 ????? ??? ?? ??????!')");
 	}
 }
 
@@ -122,24 +122,26 @@ function correct_rbutton(){
 			var mutime = parseInt(arr[1]) + 660000 - now;
 			var tgtime = parseInt(arr[2]) + 660000 - now;
 			
-			if (dbtime < 0 ) {rdom.innerHTML = "ДБ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("ДБ - ", parseInt(dbtime/1000), "rdom");}
 			
-			if (mutime < 0 ) {rmun.innerHTML = "РГ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("РГ - ", parseInt(mutime/1000), "rmun");}
 			
-			if (tgtime < 0 ) {rtorg.innerHTML = "ТГ - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("ТК - ", parseInt(tgtime/1000), "rtorg");}
+			if (dbtime < 0 ) {rdom.innerHTML = "?? - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("?? - ", parseInt(dbtime/1000), "rdom");}
+			
+			if (mutime < 0 ) {rmun.innerHTML = "?? - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("?? - ", parseInt(mutime/1000), "rmun");}
+			
+			if (tgtime < 0 ) {rtorg.innerHTML = "?? - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("?? - ", parseInt(tgtime/1000), "rtorg");}
 		
 			switch (title) {
-				case "Ковчег: Дом бойцов":swichButton(dbtime);break;
-				case "Ковчег: Регистратура":swichButton(mutime);break;
-				case "Ковчег: Торговая Комната":swichButton(tgtime);break;
+				case "??????: ??? ??????":swichButton(dbtime);break;
+				case "??????: ????????????":swichButton(mutime);break;
+				case "??????: ???????? ???????":swichButton(tgtime);break;
 				default: {
 					infodiv.setAttribute("style", "display:inline-block;");
-					rbutton.innerHTML = "Нельзя";
+					rbutton.innerHTML = "??????";
 					rbutton.setAttribute("style", "color:red; display:none;");
-					rbutton.setAttribute("onclick", "deny('Тут нельзя рекламить!')");
+					rbutton.setAttribute("onclick", "deny('??? ?????? ?????????!')");
 				}
 			}
 		}
