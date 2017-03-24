@@ -35,6 +35,7 @@ function create_rblock(){
 		var infod = menu.createElement("div");
 		infod.setAttribute("id", "rdom");
 		infodiv.appendChild(infod);
+
 		var infom = menu.createElement("div");
 		infom.setAttribute("id", "rmun");
 		infodiv.appendChild(infom);
