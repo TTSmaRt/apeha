@@ -1,8 +1,8 @@
 var pers = top.frames["d_pers"].document;
 var menu = top.frames["d_menu"].document;
 
-if (localStorage.krik==undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Зло всегда возвращается! :new47: Сколько стоит выход из клана? crazyorcs оживляют новостную:):new63: Зайди и ты)";}
-if (localStorage.lastkriklocs==undefined || localStorage.lastkriklocs==NaN) {localStorage.lastkriklocs = "0,0,0";}
+if (localStorage.krik===undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Зло всегда возвращается! :new47: Сколько стоит выход из клана? crazyorcs оживляют новостную:):new63: Зайди и ты)";}
+if (localStorage.lastkriklocs===undefined || localStorage.lastkriklocs==NaN) {localStorage.lastkriklocs = "0,0,0";}
 
 function createMyElement(targetframe, elname, elid, elclass, elstyle, elonclick, innertext) {
 	var NewElem = targetframe.createElement(elname);
@@ -61,7 +61,7 @@ function say() {
 	var loctext = top.frames["d_act"].document.getElementById("rollingscroll").getAttribute("title");
 	if (loctext == "Ковчег: Дом бойцов" || loctext == "Ковчег: Регистратура" || loctext == "Ковчег: Торговая Комната") {
 		var msgfld = top.frames["d_chatact"].document.getElementById("msgfld");
-		
+        msgfld.setAttribute("value", "");
 		msgfld.setAttribute("value", localStorage.krik);
 		var arr = localStorage.lastkriklocs.split(",");
 		var now = new Date().getTime().toString();
