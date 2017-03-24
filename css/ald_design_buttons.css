@@ -1,0 +1,46 @@
+b.button, b.button-a{background:none;}
+b.button b,b.button-a b {background:none;}
+b.button b input, b.button b button,b.button-a b input{border: 1px solid #D6C390;
+    font-size:13px;box-shadow: 0px 1px 1px rgba(0,0,0,0.5);margin:3px 2px 3px 2px;line-height:1px;background: none;cursor: pointer;display: inline-block;height:19px;font-weight: bold;outline: none;position: relative;top:0px;bottom:5px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;background: #ecd7a0;background: #fae4a9;
+    background: -moz-linear-gradient(top, #fae4a9 0%, #ecd7a0 20%, #ecd7a0 80%, #d6c390 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fae4a9), color-stop(20%,#ecd7a0), color-stop(80%,#ecd7a0), color-stop(100%,#d6c390));
+    background: -webkit-linear-gradient(top, #fae4a9 0%,#ecd7a0 20%,#ecd7a0 80%,#d6c390 100%);
+    background: -o-linear-gradient(top, #fae4a9 0%,#ecd7a0 20%,#ecd7a0 80%,#d6c390 100%);
+    background: -ms-linear-gradient(top, #fae4a9 0%,#ecd7a0 20%,#ecd7a0 80%,#d6c390 100%);
+    background: linear-gradient(to bottom, #fae4a9 0%,#ecd7a0 20%,#ecd7a0 80%,#d6c390 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fae4a9', endColorstr='#d6c390',GradientType=0 );}
+
+b.button b input:hover, b.button b button:hover{border: 1px solid #c5b485;box-shadow: 0px 0px 0px rgba(0,0,0,0.5);top:1px;bottom:4px;background: #ecd7a0;}
+b.button b input:active, b.button b button:active, b.button-a b input{border: 1px solid #b3a377;box-shadow: 0px -1px 0px rgba(0,0,0,0.5);top:2px;bottom:3px;background: #d6c390;
+    background: -moz-linear-gradient(top, #d6c390 0%, #ecd7a0 20%, #ecd7a0 80%, #fae4a9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6c390), color-stop(20%,#ecd7a0), color-stop(80%,#ecd7a0), color-stop(100%,#fae4a9));
+    background: -webkit-linear-gradient(top, #d6c390 0%,#ecd7a0 20%,#ecd7a0 80%,#fae4a9 100%);
+    background: -o-linear-gradient(top, #d6c390 0%,#ecd7a0 20%,#ecd7a0 80%,#fae4a9 100%);
+    background: -ms-linear-gradient(top, #d6c390 0%,#ecd7a0 20%,#ecd7a0 80%,#fae4a9 100%);
+    background: linear-gradient(to bottom, #d6c390 0%,#ecd7a0 20%,#ecd7a0 80%,#fae4a9 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d6c390', endColorstr='#fae4a9',GradientType=0 );}
+
+#mp~b.button b input {margin:0px 2px 5px 2px;}
+input[value="Поддержка"] {margin-left:-2px!important;}
+input[value~="замку"] {max-width:300px!important;}
+
+input[value="?"] {max-width:23px!important;min-width:23px!important;}
+input[type="text"]{min-height: 23px;padding: 5px;}
+input[value="Найти"] {max-width:50px!important;min-width:50px!important; vertical-align:top;}
+button[title="Обновить"] {min-width:23px!important; max-width:23px!important; width:23px!important; display:inline-block;}
+button[title="Обновить"] img {margin:0px; margin-left: -1px;}
+input[value="Отозвать"] {display:none!important;}
+
+input[value="Кладбище"] {display:none!important;}
+
+button[onclick*="newrating"],button[onclick*="laws"],button[onclick*="library"] {display:none!important;}
+
+.to_app, .to_lvl {position:absolute; top:0px; left:0px;color:#000;z-index: 1;font-weight: bold;}
+#exp0, #exp1 {position:absolute; top:0px; right:0px;color:#000;z-index: 1;font-weight: bold;}
+#pers1,#pers2 {position:absolute; top:0px; left:0px; height:13px; background: #C27C45;z-index: 0;}
+.l2, .l {position:relative;height: 13px;}
+.exp_line1 {position:relative;}
+#exp_info, #exp_info table{width:200px!important;}
+#JGBut {width:130px!important;}
+#exp_info table {border:1px solid #000;}
+.l2 {border-bottom:1px solid #000;}
