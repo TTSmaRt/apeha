@@ -1,7 +1,7 @@
 var pers = top.frames["d_pers"].document;
 var menu = top.frames["d_menu"].document;
 
-if (localStorage.krik==undefined || localStorage.krik==NaN) {localStorage.krik = "Кричалка";}
+if (localStorage.krik==undefined || localStorage.krik==NaN) {localStorage.krik = ":new73: Зло всегда возвращается! :new47: Сколько стоит выход из клана? crazyorcs оживляют новостную:):new63: Зайди и ты)";}
 if (localStorage.lastkriklocs==undefined || localStorage.lastkriklocs==NaN) {localStorage.lastkriklocs = [0,0,0];}
 
 function createMyElement(targetframe, elname, elid, elclass, elstyle, elonclick, innertext) {
@@ -21,7 +21,8 @@ function createElementStyle(fframe, f){
 	byIdFr(f, "mystyle").innerHTML = ".rmenu_button {height:30px; padding:3px 10px 3px 19px; border:0px solid #d1c08f; box-sizing:border-box; font: bold 12px Arial, Verdana; color: #333366; background: transparent url(img/buttrd1.gif) repeat-y left;}#infodiv {min-width:120px;}#infodiv div,  #infodiv div span{font-size:9px; line-height:9px; text-align:right;}";
 }
 
-function create_rblock(){
+function create_rblock() {
+
 	if (menu.getElementById("reclama") == null) {
 	var td0 = menu.createElement("td");
 		td0.setAttribute("id", "reclama");
@@ -58,7 +59,7 @@ function deny(txt) {alert(txt);}
 
 function say() {
 	var loctext = top.frames["d_act"].document.getElementById("rollingscroll").getAttribute("title");
-	if (loctext == "Ковчег: Дом бойцов" || loctext == "Ковчег: Муниципалитет" || loctext == "Ковчег: Торговая Комната") {
+	if (loctext == "Ковчег: Дом бойцов" || loctext == "Ковчег: Регистратура" || loctext == "Ковчег: Торговая Комната") {
 		var msgfld = top.frames["d_chatact"].document.getElementById("msgfld");
 		
 		msgfld.setAttribute("value", localStorage.krik);
@@ -69,7 +70,7 @@ function say() {
 		if (loctext == "Ковчег: Муниципалитет") {storage = ""+arr[0]+","+now+","+arr[2];}
 		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now;}
 		localStorage.lastkriklocs = storage;
-		top.frames["d_chatact"].document.getElementById("msgsnd").click();
+		//top.frames["d_chatact"].document.getElementById("msgsnd").click();
 	} else {
 		alert("Тут нельзя рекламить!");
 	}
@@ -124,15 +125,15 @@ function correct_rbutton(){
 			if (dbtime < 0 ) {rdom.innerHTML = "ДБ - <span style='color:green;'>00:00</span>";
 			} else {correctTimers("ДБ - ", parseInt(dbtime/1000), "rdom");}
 			
-			if (mutime < 0 ) {rmun.innerHTML = "МЦП - <span style='color:green;'>00:00</span>";
-			} else {correctTimers("МЦП - ", parseInt(mutime/1000), "rmun");}
+			if (mutime < 0 ) {rmun.innerHTML = "РГ - <span style='color:green;'>00:00</span>";
+			} else {correctTimers("РГ - ", parseInt(mutime/1000), "rmun");}
 			
 			if (tgtime < 0 ) {rtorg.innerHTML = "ТК - <span style='color:green;'>00:00</span>";
 			} else {correctTimers("ТК - ", parseInt(tgtime/1000), "rtorg");}
 		
 			switch (title) {
 				case "Ковчег: Дом бойцов":swichButton(dbtime);break;
-				case "Ковчег: Муниципалитет":swichButton(mutime);break;
+				case "Ковчег: Регистратура":swichButton(mutime);break;
 				case "Ковчег: Торговая Комната":swichButton(tgtime);break;
 				default: {
 					infodiv.setAttribute("style", "display:inline-block;");
