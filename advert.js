@@ -64,11 +64,11 @@ function say() {
 		
 		msgfld.setAttribute("value", localStorage.krik);
 		var arr = localStorage.lastkriklocs.split(",");
-		var now = new Date().getTime();
+		var now = new Date().getTime().toString();
 		var storage = "";
-		if (loctext == "Ковчег: Дом бойцов") {storage = ""+now+","+arr[1]+","+arr[2];}
-		if (loctext == "Ковчег: Регистратура") {storage = ""+arr[0]+","+now+","+arr[2];}
-		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now;}
+		if (loctext == "Ковчег: Дом бойцов") {storage = ""+now+","+arr[1]+","+arr[2]+"";}
+		if (loctext == "Ковчег: Регистратура") {storage = ""+arr[0]+","+now+","+arr[2]+"";}
+		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now+"";}
 		localStorage.lastkriklocs = storage;
 		//top.frames["d_chatact"].document.getElementById("msgsnd").click();
 	} else {
