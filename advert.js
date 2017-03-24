@@ -67,7 +67,7 @@ function say() {
 		var now = new Date().getTime();
 		var storage = "";
 		if (loctext == "Ковчег: Дом бойцов") {storage = ""+now+","+arr[1]+","+arr[2];}
-		if (loctext == "Ковчег: Муниципалитет") {storage = ""+arr[0]+","+now+","+arr[2];}
+		if (loctext == "Ковчег: Регистратура") {storage = ""+arr[0]+","+now+","+arr[2];}
 		if (loctext == "Ковчег: Торговая Комната") {storage = ""+arr[0]+","+arr[1]+","+now;}
 		localStorage.lastkriklocs = storage;
 		//top.frames["d_chatact"].document.getElementById("msgsnd").click();
