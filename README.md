@@ -20,7 +20,7 @@ if (fr!=undefined) {
     var ap = top.frames["d_menu"].document.getElementById('apehaPlugin');
     if (ap===null) {
         var scr=top.frames["d_menu"].document.createElement('script');
-        scr.setAttribute('src','https://rawgit.com/smart-apeha/apeha/master/<FILE NAME>.js');
+        scr.setAttribute('src','https://rawgit.com/smart-apeha/apeha/master/FileName.js');
         scr.setAttribute('id','apehaPlugin');
         top.frames["d_menu"].document.getElementsByTagName('head')[0].appendChild(scr);
     }
