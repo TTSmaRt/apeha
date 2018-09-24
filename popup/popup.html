@@ -1,0 +1,44 @@
+<!doctype html>
+<html id="wrapper">
+	<head>
+		<title>Scripter</title>
+    <link rel="stylesheet" type="text/css" href="/popup/popup.css"/>
+    <script type="text/javascript" src="/scripts/jquery.js"></script>   
+    <script type="text/javascript" src="/scripts/store.js"></script>
+		<script type="text/javascript" src="/popup/popup.js"></script>
+    <link rel="stylesheet" href="/codemirror/codemirror.css">
+    <script src="/codemirror/codemirror.js"></script>
+    <script src="/codemirror/javascript.js"></script>
+	</head>
+	<body>
+  <ul>
+        <li> 
+          <label for="script_event" translate="label_script_order">Script execution order</label>
+          <select id="script_event" name="script_event">
+            <option value="disabled" selected="selected" translate="option_disabled">disabled (script will not be run)</option>
+            <option value="beforeall" translate="option_beforeall">beforeall (script will be run after first recived data of page)</option>
+            <option value="onready" translate="option_onready">onready (script will be run after HTML page ready)</option>
+            <option value="onload" translate="option_onload">onload (script will be run after all content loaded)</option>
+				  </select>
+        </li> 
+        <li>
+          <input id="script_inject" type="checkbox" class="right" checked="true" />
+          <label for="script_inject" translate="label_inject_jquery" class="right">Inject jQuery and Global script</label>
+          <label for="script_script" translate="label_js_code">JavaScript code</label>
+				  <textarea id="script_script" wrap="off" rows="3" cols="10"></textarea>
+        </li>   
+        <li>
+          <label for="script_css" translate="label_css_code">CSS code</label>
+				  <textarea id="script_css" wrap="off" rows="3" cols="10"></textarea>
+        </li> 
+        <li>
+          <label for="comment_comment" translate="label_comment">Comment</label>
+				  <textarea id="script_comment" wrap="off" name="script_comment" rows="6" cols="10"></textarea>
+          <input type="button" id="savebutton" value="Save" translate="label_save"/>
+          <input type="button" id="clearbutton" value="Clear" translate="label_clear"/>
+          <input type="button" id="clearvaluesbutton" value="Clear values" translate="label_clear_values"/>
+          <div id="message"></div>
+        </li>
+      </ul>   
+	</body>
+</html>

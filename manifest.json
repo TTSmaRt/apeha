@@ -1,0 +1,34 @@
+{
+   "background": {
+      "scripts": ["watch/background.js" ],
+      "matches": [ "http://kovcheg.apeha.ru/*", "https://kovcheg.apeha.ru/*" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "watch/include.js" ],
+      "matches": [ "http://kovcheg.apeha.ru/*", "https://kovcheg.apeha.ru/*" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "description": "Apeha Extension",
+   "developer": {
+      "name": "SmaRt",
+      "url": ""
+   },
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+
+   "manifest_version": 2,
+   "name": "Apeha Extension",
+   "options_page": "options/options.html",
+   "page_action": {
+      "default_icon": "icons/icon16disabled.png",
+      "default_popup": "popup/popup.html",
+      "default_title": "Apeha Extension title"
+   },
+   "permissions": ["tabs","https://kovcheg.apeha.ru/*", "storage", "http://kovcheg.apeha.ru/*", "webRequest", "unlimitedStorage" ],
+   "version": "1.0.0"
+}

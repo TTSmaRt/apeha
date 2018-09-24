@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="/options/options.css" rel="stylesheet" />
+<script type="text/javascript" src="/scripts/jquery.js"></script>
+<script type="text/javascript" src="/scripts/store.js"></script>
+<script type="text/javascript" src="/options/options.js"></script>
+
+<link rel="stylesheet" href="/codemirror/codemirror.css">
+<script type="text/javascript" src="/codemirror/codemirror.js"></script>
+<script type="text/javascript" src="/codemirror/javascript.js"></script>
+
+<title translate="label_options_title">Scripter Options</title>
+</head>
+
+  <body>
+  
+  <div id="wrapper">
+  
+  <h1><img src="/icons/icon48.png" width="48" height="48" class="icon"/><span translate="label_options">Options for Scripter</span></h1>
+  
+  <ul>
+    <li>
+      <label for="global_scripts" translate="label_global_script">Global script (will be executed before injected script)</label>
+      <textarea name="global_scripts" id="global_scripts"></textarea>
+      <input type="button" value="Save" id="save_global" translate="label_save" />
+    </li>
+    <li>
+      <div class="collapsed" title="Export/Import to text" translate="label_export_import_text">
+      <label for="import_file" translate="label_export_text">Export extenssion data to text</label>
+      <input type="file" name="import_file" id="import_file" />
+      <input type="button" value="Import" name="save" id="save" translate="label_import"/>
+      <input type="button" value="Export" name="reset" id="reset" translate="label_export" />
+      </div>
+    </li>
+    <li>
+      <div class="collapsed" title="Sync with store server" translate="label_sync_server">
+      <a href="http://info.amazant.ru/store/srv.zip" class="srv" translate="label_files_for_storage">files for private storage</a>
+      <label for="store_url" translate="label_store_url">Storage url</label>
+      <input type="text" name="store_url" id="store_url"/> 
+      <label for="store_login" translate="label_store_login">Store login</label>
+      <input type="text" name="store_login" id="store_login"/> 
+      <label for="store_password" translate="label_store_password">Store password</label>
+      <input type="password" name="store_password" id="store_password"/>
+      <input type="button" value="Download data" id="update_from_store" translate="label_download_data"/> 
+      <input type="button" value="Update data on server" id="update_to_store" translate="label_upload_data"/>
+        
+      </div>
+    </li>
+  </ul>
+  </div>                                                               
+  </body>
+</html>
